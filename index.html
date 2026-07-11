@@ -27,7 +27,7 @@
         <!-- Dashboard -->
         <main class="dashboard">
 
-            <!-- Top Control Bar -->
+            <!-- Control Bar -->
             <section id="control-bar">
 
                 <button id="start-btn">▶ Start Telemetry</button>
@@ -44,8 +44,38 @@
 
             </section>
 
-            <!-- Mission Controls -->
+            <!-- Mission Control -->
             <section id="mission-controls">
+
+                <h2>Mission Control</h2>
+
+                <div class="mission-buttons">
+
+                    <button id="separation-btn">
+                        Manual Separation
+                    </button>
+
+                    <button id="parachute-btn">
+                        Emergency Parachute
+                    </button>
+
+                    <button id="redundant-btn">
+                        Redundant Activation
+                    </button>
+
+                </div>
+
+                <div class="command-status">
+
+                    <h3>Command Status</h3>
+
+                    <p>Status :
+                        <span id="command-status">
+                            Waiting...
+                        </span>
+                    </p>
+
+                </div>
 
             </section>
 
@@ -54,7 +84,7 @@
 
             </section>
 
-            <!-- Error Code -->
+            <!-- Error System -->
             <section id="error-system">
 
             </section>
@@ -64,7 +94,7 @@
 
             </section>
 
-            <!-- GPS Map -->
+            <!-- GPS -->
             <section id="tracking-map">
 
             </section>
@@ -74,7 +104,7 @@
 
             </section>
 
-            <!-- Live Video -->
+            <!-- Video -->
             <section id="video-stream">
 
             </section>
