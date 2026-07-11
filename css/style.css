@@ -189,3 +189,48 @@ body{
     font-weight:bold;
 
 }
+/* ==========================================
+   Telemetry
+========================================== */
+
+#telemetry h2{
+
+    color:#00E5FF;
+
+    margin-bottom:20px;
+
+}
+
+.telemetry-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.telemetry-table td{
+
+    padding:12px;
+
+    border-bottom:1px solid #293548;
+
+}
+
+.telemetry-table td:first-child{
+
+    color:#A0AEC0;
+
+    width:60%;
+
+}
+
+.telemetry-table td:last-child{
+
+    color:#22C55E;
+
+    font-weight:bold;
+
+    text-align:right;
+
+}
