@@ -16,6 +16,10 @@ let longitude = 77.5946;
 // Update Telemetry Every Second
 setInterval(() => {
 
+    if(!telemetryRunning){
+        return;
+    }
+
     packetCount++;
 
     altitude -= Math.random() * 3;
