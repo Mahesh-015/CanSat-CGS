@@ -46,3 +46,63 @@ body{
 .dashboard{
     padding:20px;
 }
+
+/* ==========================================
+   Control Bar
+========================================== */
+
+#control-bar{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* Buttons */
+
+#control-bar button{
+    background:#1E3A8A;
+    color:#FFFFFF;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#control-bar button:hover{
+    background:#2563EB;
+    transform:translateY(-2px);
+}
+
+#start-btn{
+    background:#16A34A;
+}
+
+#start-btn:hover{
+    background:#22C55E;
+}
+
+#stop-btn{
+    background:#DC2626;
+}
+
+#stop-btn:hover{
+    background:#EF4444;
+}
+
+#csv-btn,
+#graph-btn,
+#sync-btn,
+#reset-btn{
+    background:#374151;
+}
+
+#csv-btn:hover,
+#graph-btn:hover,
+#sync-btn:hover,
+#reset-btn:hover{
+    background:#4B5563;
+}
