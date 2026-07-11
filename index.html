@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
 <div id="app">
 
-    <!-- Header -->
     <header class="top-bar">
         <div class="title-section">
             <h1>CanSat Ground Control Station</h1>
@@ -24,54 +26,37 @@
 
     <main class="dashboard">
 
-        <!-- Control Bar -->
         <section id="control-bar">
-
             <button id="start-btn">▶ Start Telemetry</button>
             <button id="stop-btn">■ Stop Telemetry</button>
             <button id="csv-btn">📄 Export CSV</button>
             <button id="graph-btn">📊 Export Graph</button>
             <button id="sync-btn">🕒 Sync PC Time</button>
             <button id="reset-btn">🔄 Reset Packet</button>
-
         </section>
 
-        <!-- Mission Control -->
         <section id="mission-controls">
 
             <h2>Mission Control</h2>
 
             <div class="mission-buttons">
-
                 <button>Manual Separation</button>
-
                 <button>Emergency Parachute</button>
-
                 <button>Redundant Activation</button>
-
             </div>
 
             <div class="command-status">
-
                 <h3>Command Status</h3>
-
-                <p>Status :
-                    <span id="command-status">
-                        Waiting...
-                    </span>
-                </p>
-
+                <p>Status : <span id="command-status">Waiting...</span></p>
             </div>
 
         </section>
 
-        <!-- Telemetry -->
         <section id="telemetry">
 
             <h2>Telemetry</h2>
 
             <table class="telemetry-table">
-
                 <tr><td>Packet Count</td><td>0</td></tr>
                 <tr><td>Mission Time</td><td>00:00:00</td></tr>
                 <tr><td>Altitude</td><td>0 m</td></tr>
@@ -81,73 +66,68 @@
                 <tr><td>Battery Voltage</td><td>0 V</td></tr>
                 <tr><td>Latitude</td><td>0.000000</td></tr>
                 <tr><td>Longitude</td><td>0.000000</td></tr>
-
             </table>
 
         </section>
 
-        <!-- Error Code -->
         <section id="error-system">
 
             <h2>Error Code System</h2>
 
             <div class="error-code">
-
                 <span class="digit safe">0</span>
                 <span class="digit safe">0</span>
                 <span class="digit safe">0</span>
                 <span class="digit safe">0</span>
-
-            </div>
-
-            <div class="error-list">
-
-                <p><span class="indicator safe"></span> Descent Rate</p>
-
-                <p><span class="indicator safe"></span> GPS Available</p>
-
-                <p><span class="indicator safe"></span> Payload Separation</p>
-
-                <p><span class="indicator safe"></span> Emergency Parachute</p>
-
             </div>
 
         </section>
 
-        <!-- Graphs -->
         <section id="graphs">
 
             <h2>Real-Time Graphs</h2>
 
-            <p>Graphs will be added in the next step.</p>
+            <div class="graph-grid">
+
+                <div class="graph-card">
+                    <h3>Altitude</h3>
+                    <canvas id="altitudeChart"></canvas>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Temperature</h3>
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Pressure</h3>
+                    <canvas id="pressureChart"></canvas>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Descent Rate</h3>
+                    <canvas id="descentChart"></canvas>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Battery Voltage</h3>
+                    <canvas id="batteryChart"></canvas>
+                </div>
+
+            </div>
 
         </section>
 
-        <!-- GPS -->
         <section id="tracking-map">
-
             <h2>GPS Tracking</h2>
-
-            <p>Live map will appear here.</p>
-
         </section>
 
-        <!-- Orientation -->
         <section id="orientation">
-
             <h2>Orientation</h2>
-
-            <p>Roll • Pitch • Yaw</p>
-
         </section>
 
-        <!-- Video -->
         <section id="video-stream">
-
             <h2>Live Video</h2>
-
-            <p>Camera stream will appear here.</p>
-
         </section>
 
     </main>
