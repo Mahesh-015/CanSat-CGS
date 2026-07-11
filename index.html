@@ -43,11 +43,11 @@
 
             <div class="mission-buttons">
 
-                <button id="separation-btn">Manual Separation</button>
+                <button>Manual Separation</button>
 
-                <button id="parachute-btn">Emergency Parachute</button>
+                <button>Emergency Parachute</button>
 
-                <button id="redundant-btn">Redundant Activation</button>
+                <button>Redundant Activation</button>
 
             </div>
 
@@ -72,69 +72,83 @@
 
             <table class="telemetry-table">
 
-                <tr>
-                    <td>Packet Count</td>
-                    <td id="packet-count">0</td>
-                </tr>
-
-                <tr>
-                    <td>Mission Time</td>
-                    <td id="mission-time">00:00:00</td>
-                </tr>
-
-                <tr>
-                    <td>Altitude</td>
-                    <td id="altitude">0 m</td>
-                </tr>
-
-                <tr>
-                    <td>Pressure</td>
-                    <td id="pressure">0 Pa</td>
-                </tr>
-
-                <tr>
-                    <td>Temperature</td>
-                    <td id="temperature">0 °C</td>
-                </tr>
-
-                <tr>
-                    <td>Descent Rate</td>
-                    <td id="descent-rate">0 m/s</td>
-                </tr>
-
-                <tr>
-                    <td>Battery Voltage</td>
-                    <td id="battery">0 V</td>
-                </tr>
-
-                <tr>
-                    <td>Latitude</td>
-                    <td id="latitude">0.000000</td>
-                </tr>
-
-                <tr>
-                    <td>Longitude</td>
-                    <td id="longitude">0.000000</td>
-                </tr>
+                <tr><td>Packet Count</td><td>0</td></tr>
+                <tr><td>Mission Time</td><td>00:00:00</td></tr>
+                <tr><td>Altitude</td><td>0 m</td></tr>
+                <tr><td>Pressure</td><td>0 Pa</td></tr>
+                <tr><td>Temperature</td><td>0 °C</td></tr>
+                <tr><td>Descent Rate</td><td>0 m/s</td></tr>
+                <tr><td>Battery Voltage</td><td>0 V</td></tr>
+                <tr><td>Latitude</td><td>0.000000</td></tr>
+                <tr><td>Longitude</td><td>0.000000</td></tr>
 
             </table>
 
         </section>
 
-        <!-- Error System -->
-        <section id="error-system"></section>
+        <!-- Error Code -->
+        <section id="error-system">
+
+            <h2>Error Code System</h2>
+
+            <div class="error-code">
+
+                <span class="digit safe">0</span>
+                <span class="digit safe">0</span>
+                <span class="digit safe">0</span>
+                <span class="digit safe">0</span>
+
+            </div>
+
+            <div class="error-list">
+
+                <p><span class="indicator safe"></span> Descent Rate</p>
+
+                <p><span class="indicator safe"></span> GPS Available</p>
+
+                <p><span class="indicator safe"></span> Payload Separation</p>
+
+                <p><span class="indicator safe"></span> Emergency Parachute</p>
+
+            </div>
+
+        </section>
 
         <!-- Graphs -->
-        <section id="graphs"></section>
+        <section id="graphs">
+
+            <h2>Real-Time Graphs</h2>
+
+            <p>Graphs will be added in the next step.</p>
+
+        </section>
 
         <!-- GPS -->
-        <section id="tracking-map"></section>
+        <section id="tracking-map">
+
+            <h2>GPS Tracking</h2>
+
+            <p>Live map will appear here.</p>
+
+        </section>
 
         <!-- Orientation -->
-        <section id="orientation"></section>
+        <section id="orientation">
+
+            <h2>Orientation</h2>
+
+            <p>Roll • Pitch • Yaw</p>
+
+        </section>
 
         <!-- Video -->
-        <section id="video-stream"></section>
+        <section id="video-stream">
+
+            <h2>Live Video</h2>
+
+            <p>Camera stream will appear here.</p>
+
+        </section>
 
     </main>
 
