@@ -1,1 +1,61 @@
+/* ==========================================
+   Dashboard Layout
+========================================== */
 
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    gap:20px;
+}
+
+/* Common Panel Style */
+
+.dashboard section{
+    background:#111827;
+    border:1px solid #1F2937;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:0 0 8px rgba(0,0,0,0.3);
+}
+
+/* Dashboard Sections */
+
+#control-bar{
+    grid-column:1 / 13;
+    min-height:80px;
+}
+
+#mission-controls{
+    grid-column:1 / 4;
+    min-height:300px;
+}
+
+#telemetry{
+    grid-column:4 / 10;
+    min-height:300px;
+}
+
+#error-system{
+    grid-column:10 / 13;
+    min-height:300px;
+}
+
+#graphs{
+    grid-column:1 / 9;
+    min-height:350px;
+}
+
+#tracking-map{
+    grid-column:9 / 13;
+    min-height:350px;
+}
+
+#orientation{
+    grid-column:1 / 7;
+    min-height:300px;
+}
+
+#video-stream{
+    grid-column:7 / 13;
+    min-height:300px;
+}
