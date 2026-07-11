@@ -1,1 +1,48 @@
+/* ==========================================
+   CanSat Ground Control Station
+   Main Stylesheet
+========================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0B1120;
+    color:#FFFFFF;
+}
+
+/* Main Container */
+
+#app{
+    width:100%;
+    min-height:100vh;
+}
+
+/* Header */
+
+.top-bar{
+    background:#111827;
+    border-bottom:2px solid #1F2937;
+    padding:20px 40px;
+}
+
+.title-section h1{
+    font-size:30px;
+    color:#00E5FF;
+    margin-bottom:6px;
+}
+
+.title-section p{
+    color:#9CA3AF;
+    font-size:15px;
+}
+
+/* Dashboard */
+
+.dashboard{
+    padding:20px;
+}
