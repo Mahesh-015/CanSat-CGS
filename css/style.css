@@ -234,3 +234,87 @@ body{
     text-align:right;
 
 }
+
+/* ==========================================
+   Error Code System
+========================================== */
+
+#error-system h2{
+
+    color:#00E5FF;
+
+    margin-bottom:20px;
+
+}
+
+.error-code{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.digit{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+.safe{
+
+    background:#16A34A;
+
+    color:white;
+
+}
+
+.fault{
+
+    background:#DC2626;
+
+    color:white;
+
+}
+
+.error-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.indicator{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    margin-right:10px;
+
+}
