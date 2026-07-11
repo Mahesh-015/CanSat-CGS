@@ -1,6 +1,5 @@
 /* ==========================================
    CanSat Ground Control Station
-   Main Stylesheet
 ========================================== */
 
 *{
@@ -12,10 +11,8 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0B1120;
-    color:#FFFFFF;
+    color:white;
 }
-
-/* Main Container */
 
 #app{
     width:100%;
@@ -31,14 +28,14 @@ body{
 }
 
 .title-section h1{
-    font-size:30px;
     color:#00E5FF;
+    font-size:32px;
     margin-bottom:6px;
 }
 
 .title-section p{
-    color:#9CA3AF;
-    font-size:15px;
+    color:#A0AEC0;
+    font-size:16px;
 }
 
 /* Dashboard */
@@ -47,62 +44,148 @@ body{
     padding:20px;
 }
 
-/* ==========================================
-   Control Bar
-========================================== */
+/* Control Bar */
 
 #control-bar{
     display:flex;
-    align-items:center;
     gap:15px;
+    align-items:center;
     flex-wrap:wrap;
 }
 
-/* Buttons */
-
 #control-bar button{
-    background:#1E3A8A;
-    color:#FFFFFF;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    font-size:15px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
 
-#control-bar button:hover{
-    background:#2563EB;
-    transform:translateY(-2px);
+    border:none;
+    cursor:pointer;
+
+    padding:12px 18px;
+
+    border-radius:8px;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
 }
 
 #start-btn{
+
     background:#16A34A;
+
 }
 
 #start-btn:hover{
+
     background:#22C55E;
+
 }
 
 #stop-btn{
+
     background:#DC2626;
+
 }
 
 #stop-btn:hover{
+
     background:#EF4444;
+
 }
 
 #csv-btn,
 #graph-btn,
 #sync-btn,
 #reset-btn{
+
     background:#374151;
+
 }
 
 #csv-btn:hover,
 #graph-btn:hover,
 #sync-btn:hover,
 #reset-btn:hover{
+
     background:#4B5563;
+
+}
+
+/* Mission Control */
+
+#mission-controls h2{
+
+    margin-bottom:20px;
+
+    color:#00E5FF;
+
+}
+
+.mission-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.mission-buttons button{
+
+    padding:15px;
+
+    background:#1F2937;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+.mission-buttons button:hover{
+
+    background:#2563EB;
+
+}
+
+.command-status{
+
+    margin-top:25px;
+
+    background:#0F172A;
+
+    padding:15px;
+
+    border-radius:8px;
+
+}
+
+.command-status h3{
+
+    color:#22C55E;
+
+    margin-bottom:10px;
+
+}
+
+#command-status{
+
+    color:#FBBF24;
+
+    font-weight:bold;
+
 }
