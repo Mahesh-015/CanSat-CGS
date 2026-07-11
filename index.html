@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>CanSat Ground Control Station</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -14,106 +12,135 @@
 
 <body>
 
-    <div id="app">
+<div id="app">
 
-        <!-- Header -->
-        <header class="top-bar">
-            <div class="title-section">
-                <h1>CanSat Ground Control Station</h1>
-                <p>Mission Operations Dashboard</p>
+    <!-- Header -->
+    <header class="top-bar">
+        <div class="title-section">
+            <h1>CanSat Ground Control Station</h1>
+            <p>Mission Operations Dashboard</p>
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <!-- Control Bar -->
+        <section id="control-bar">
+
+            <button id="start-btn">▶ Start Telemetry</button>
+            <button id="stop-btn">■ Stop Telemetry</button>
+            <button id="csv-btn">📄 Export CSV</button>
+            <button id="graph-btn">📊 Export Graph</button>
+            <button id="sync-btn">🕒 Sync PC Time</button>
+            <button id="reset-btn">🔄 Reset Packet</button>
+
+        </section>
+
+        <!-- Mission Control -->
+        <section id="mission-controls">
+
+            <h2>Mission Control</h2>
+
+            <div class="mission-buttons">
+
+                <button id="separation-btn">Manual Separation</button>
+
+                <button id="parachute-btn">Emergency Parachute</button>
+
+                <button id="redundant-btn">Redundant Activation</button>
+
             </div>
-        </header>
 
-        <!-- Dashboard -->
-        <main class="dashboard">
+            <div class="command-status">
 
-            <!-- Control Bar -->
-            <section id="control-bar">
+                <h3>Command Status</h3>
 
-                <button id="start-btn">▶ Start Telemetry</button>
+                <p>Status :
+                    <span id="command-status">
+                        Waiting...
+                    </span>
+                </p>
 
-                <button id="stop-btn">■ Stop Telemetry</button>
+            </div>
 
-                <button id="csv-btn">📄 Export CSV</button>
+        </section>
 
-                <button id="graph-btn">📊 Export Graph</button>
+        <!-- Telemetry -->
+        <section id="telemetry">
 
-                <button id="sync-btn">🕒 Sync PC Time</button>
+            <h2>Telemetry</h2>
 
-                <button id="reset-btn">🔄 Reset Packet</button>
+            <table class="telemetry-table">
 
-            </section>
+                <tr>
+                    <td>Packet Count</td>
+                    <td id="packet-count">0</td>
+                </tr>
 
-            <!-- Mission Control -->
-            <section id="mission-controls">
+                <tr>
+                    <td>Mission Time</td>
+                    <td id="mission-time">00:00:00</td>
+                </tr>
 
-                <h2>Mission Control</h2>
+                <tr>
+                    <td>Altitude</td>
+                    <td id="altitude">0 m</td>
+                </tr>
 
-                <div class="mission-buttons">
+                <tr>
+                    <td>Pressure</td>
+                    <td id="pressure">0 Pa</td>
+                </tr>
 
-                    <button id="separation-btn">
-                        Manual Separation
-                    </button>
+                <tr>
+                    <td>Temperature</td>
+                    <td id="temperature">0 °C</td>
+                </tr>
 
-                    <button id="parachute-btn">
-                        Emergency Parachute
-                    </button>
+                <tr>
+                    <td>Descent Rate</td>
+                    <td id="descent-rate">0 m/s</td>
+                </tr>
 
-                    <button id="redundant-btn">
-                        Redundant Activation
-                    </button>
+                <tr>
+                    <td>Battery Voltage</td>
+                    <td id="battery">0 V</td>
+                </tr>
 
-                </div>
+                <tr>
+                    <td>Latitude</td>
+                    <td id="latitude">0.000000</td>
+                </tr>
 
-                <div class="command-status">
+                <tr>
+                    <td>Longitude</td>
+                    <td id="longitude">0.000000</td>
+                </tr>
 
-                    <h3>Command Status</h3>
+            </table>
 
-                    <p>Status :
-                        <span id="command-status">
-                            Waiting...
-                        </span>
-                    </p>
+        </section>
 
-                </div>
+        <!-- Error System -->
+        <section id="error-system"></section>
 
-            </section>
+        <!-- Graphs -->
+        <section id="graphs"></section>
 
-            <!-- Telemetry -->
-            <section id="telemetry">
+        <!-- GPS -->
+        <section id="tracking-map"></section>
 
-            </section>
+        <!-- Orientation -->
+        <section id="orientation"></section>
 
-            <!-- Error System -->
-            <section id="error-system">
+        <!-- Video -->
+        <section id="video-stream"></section>
 
-            </section>
+    </main>
 
-            <!-- Graphs -->
-            <section id="graphs">
+</div>
 
-            </section>
-
-            <!-- GPS -->
-            <section id="tracking-map">
-
-            </section>
-
-            <!-- Orientation -->
-            <section id="orientation">
-
-            </section>
-
-            <!-- Video -->
-            <section id="video-stream">
-
-            </section>
-
-        </main>
-
-    </div>
-
-    <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
