@@ -1,128 +1,857 @@
-/* ==========================================
-   CanSat Ground Control Station
-========================================== */
+/* ==========================================================
+   CANSAT GROUND CONTROL STATION
+   PROFESSIONAL UI
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0B1120;
-    color:white;
+
+    font-family:'Inter',sans-serif;
+
+    background:#050B16;
+
+    color:#E5EDF7;
+
+    overflow-x:hidden;
+
 }
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08101F;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00D9FF;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================================
+   MAIN APP
+========================================================== */
 
 #app{
+
     width:100%;
+
     min-height:100vh;
+
 }
 
-/* Header */
+/* ==========================================================
+   HEADER
+========================================================== */
 
 .top-bar{
-    background:#111827;
-    border-bottom:2px solid #1F2937;
-    padding:20px 40px;
+
+    background:#08111F;
+
+    padding:22px 35px;
+
+    border-bottom:2px solid #143962;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+
+        0 8px 25px rgba(0,0,0,.35);
+
 }
 
 .title-section h1{
-    color:#00E5FF;
-    font-size:32px;
-    margin-bottom:6px;
+
+    color:#00D9FF;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
 }
 
 .title-section p{
-    color:#A0AEC0;
-    font-size:16px;
+
+    margin-top:8px;
+
+    color:#9FB5C8;
+
+    font-size:15px;
+
 }
 
-/* Dashboard */
+/* ==========================================================
+   HEADER RIGHT
+========================================================== */
+
+.mission-info{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.mission-card{
+
+    background:#0F1B2F;
+
+    border:1px solid #1E3D63;
+
+    border-radius:15px;
+
+    padding:15px 22px;
+
+    min-width:130px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.mission-card:hover{
+
+    border-color:#00D9FF;
+
+    transform:translateY(-3px);
+
+}
+
+.mission-title{
+
+    display:block;
+
+    color:#91A5BB;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.mission-value{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   DASHBOARD
+========================================================== */
 
 .dashboard{
-    padding:20px;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
 }
 
-/* Control Bar */
+/* ==========================================================
+   COMMON PANEL
+========================================================== */
+
+section{
+
+    background:#0E1728;
+
+    border:1px solid #183B63;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0,.25);
+
+}
+
+section:hover{
+
+    border-color:#00D9FF;
+
+    transform:translateY(-2px);
+
+}
+
+section h2{
+
+    color:#00D9FF;
+
+    font-size:23px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================================
+   CONTROL BAR
+========================================================== */
 
 #control-bar{
+
     display:flex;
+
     gap:15px;
-    align-items:center;
+
     flex-wrap:wrap;
+
+    align-items:center;
+
 }
 
 #control-bar button{
 
     border:none;
+
+    padding:13px 22px;
+
+    border-radius:12px;
+
     cursor:pointer;
-
-    padding:12px 18px;
-
-    border-radius:8px;
 
     color:white;
 
-    font-size:15px;
+    font-size:14px;
 
-    font-weight:bold;
+    font-weight:600;
 
     transition:.3s;
 
 }
 
+/* Start */
+
 #start-btn{
 
-    background:#16A34A;
+    background:linear-gradient(135deg,#00C853,#00A63F);
 
 }
 
-#start-btn:hover{
-
-    background:#22C55E;
-
-}
+/* Stop */
 
 #stop-btn{
 
-    background:#DC2626;
+    background:linear-gradient(135deg,#F44336,#C62828);
 
 }
 
-#stop-btn:hover{
-
-    background:#EF4444;
-
-}
+/* Others */
 
 #csv-btn,
 #graph-btn,
 #sync-btn,
 #reset-btn{
 
-    background:#374151;
+    background:#203756;
 
 }
 
-#csv-btn:hover,
-#graph-btn:hover,
-#sync-btn:hover,
-#reset-btn:hover{
+#control-bar button:hover{
 
-    background:#4B5563;
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 0 18px rgba(0,217,255,.30);
+
+}
+
+/* ==========================================================
+   SIMULATION
+========================================================== */
+
+.simulation-toggle{
+
+    margin-left:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
 
 }
 
-/* Mission Control */
+.simulation-toggle input{
 
-#mission-controls h2{
+    width:18px;
 
-    margin-bottom:20px;
-
-    color:#00E5FF;
+    height:18px;
 
 }
+
+/* ==========================================================
+   STATUS CARDS
+========================================================== */
+
+#mission-status{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:18px;
+
+}
+
+.status-card{
+
+    background:#101C30;
+
+    border:1px solid #1E3D63;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.status-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#00D9FF;
+
+}
+
+.status-label{
+
+    color:#9AB0C5;
+
+    font-size:13px;
+
+    margin-bottom:12px;
+
+    text-transform:uppercase;
+
+}
+
+.status-indicator{
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.online{
+
+    color:#00D26A;
+
+}
+
+.offline{
+
+    color:#F44336;
+
+}
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+.main-content{
+
+    display:grid;
+
+    grid-template-columns:330px 1fr;
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+   TELEMETRY PANEL
+========================================================== */
+
+#telemetry-panel{
+
+    background:#0E1728;
+
+}
+
+.telemetry-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.telemetry-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 16px;
+
+    background:#12213A;
+
+    border-radius:10px;
+
+    border:1px solid #1E3D63;
+
+    transition:.3s;
+
+}
+
+.telemetry-row:hover{
+
+    border-color:#00D9FF;
+
+}
+
+.telemetry-row span:first-child{
+
+    color:#A5B8CB;
+
+}
+
+.telemetry-row span:last-child{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.telemetry-list hr{
+
+    border:none;
+
+    border-top:1px solid #26486D;
+
+    margin:10px 0;
+
+}
+
+/* ==========================================================
+   BATTERY BAR
+========================================================== */
+
+.battery-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#23354C;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin:10px 0 18px;
+
+}
+
+#battery-fill{
+
+    width:100%;
+
+    height:100%;
+
+    background:#00D26A;
+
+    transition:.4s;
+
+}
+/* ==========================================================
+   GPS MAP
+========================================================== */
+
+#tracking-map{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.panel-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.panel-status{
+
+    color:#00D26A;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+#map{
+
+    width:100%;
+
+    height:600px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    border:2px solid #1E3D63;
+
+}
+
+/* ==========================================================
+   GRAPH SECTION
+========================================================== */
+
+.graph-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:20px;
+
+}
+
+.graph-card{
+
+    background:#101C30;
+
+    border:1px solid #1E3D63;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    transition:.35s;
+
+}
+
+.graph-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#00D9FF;
+
+    box-shadow:
+
+        0 0 20px rgba(0,217,255,.18);
+
+}
+
+.graph-card h3{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    color:#F8FAFC;
+
+    font-size:18px;
+
+}
+
+.graph-card canvas{
+
+    width:100%!important;
+
+    height:260px!important;
+
+}
+
+/* ==========================================================
+   BOTTOM SECTION
+========================================================== */
+
+.bottom-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+   ORIENTATION
+========================================================== */
+
+#orientation-view{
+
+    width:100%;
+
+    height:420px;
+
+    background:#08111F;
+
+    border-radius:16px;
+
+    border:2px solid #1E3D63;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   CAMERA
+========================================================== */
+
+#camera{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    background:black;
+
+    border-radius:16px;
+
+    border:2px solid #1E3D63;
+
+}
+
+.video-controls{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.video-controls button{
+
+    flex:1;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#203756;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.video-controls button:hover{
+
+    background:#00D9FF;
+
+    color:#08111F;
+
+}
+
+/* ==========================================================
+   STATUS CONTENT
+========================================================== */
+
+.status-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+   ERROR SYSTEM
+========================================================== */
+
+.error-code{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.digit{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:15px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.safe{
+
+    background:#00C853;
+
+    color:white;
+
+}
+
+.fault{
+
+    background:#D32F2F;
+
+    color:white;
+
+    animation:blink 1s infinite;
+
+}
+
+@keyframes blink{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.4;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+    }
+
+}
+
+.error-list{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+.error-list p{
+
+    background:#12213A;
+
+    border:1px solid #1E3D63;
+
+    border-radius:10px;
+
+    padding:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.indicator{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#00C853;
+
+}
+
+/* ==========================================================
+   MISSION CONTROL
+========================================================== */
 
 .mission-buttons{
 
@@ -132,240 +861,415 @@ body{
 
     gap:15px;
 
+    margin-bottom:25px;
+
 }
 
 .mission-buttons button{
 
-    padding:15px;
-
-    background:#1F2937;
-
-    color:white;
+    padding:16px;
 
     border:none;
 
-    border-radius:8px;
+    border-radius:12px;
+
+    background:#203756;
+
+    color:white;
 
     cursor:pointer;
 
-    transition:.3s;
-
     font-size:15px;
 
-    font-weight:bold;
+    font-weight:600;
+
+    transition:.3s;
 
 }
 
 .mission-buttons button:hover{
 
-    background:#2563EB;
+    background:#00D9FF;
+
+    color:#08111F;
 
 }
 
 .command-status{
 
-    margin-top:25px;
+    background:#12213A;
 
-    background:#0F172A;
+    border:1px solid #1E3D63;
 
-    padding:15px;
+    border-radius:12px;
 
-    border-radius:8px;
+    padding:18px;
 
 }
 
 .command-status h3{
 
-    color:#22C55E;
-
     margin-bottom:10px;
+
+    color:#00D9FF;
 
 }
 
 #command-status{
 
-    color:#FBBF24;
+    color:#00D26A;
 
-    font-weight:bold;
-
-}
-/* ==========================================
-   Telemetry
-========================================== */
-
-#telemetry h2{
-
-    color:#00E5FF;
-
-    margin-bottom:20px;
+    font-weight:700;
 
 }
+/* ==========================================================
+   FOOTER
+========================================================== */
 
-.telemetry-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-}
-
-.telemetry-table td{
-
-    padding:12px;
-
-    border-bottom:1px solid #293548;
-
-}
-
-.telemetry-table td:first-child{
-
-    color:#A0AEC0;
-
-    width:60%;
-
-}
-
-.telemetry-table td:last-child{
-
-    color:#22C55E;
-
-    font-weight:bold;
-
-    text-align:right;
-
-}
-
-/* ==========================================
-   Error Code System
-========================================== */
-
-#error-system h2{
-
-    color:#00E5FF;
-
-    margin-bottom:20px;
-
-}
-
-.error-code{
+footer{
 
     display:flex;
 
-    justify-content:center;
-
-    gap:15px;
-
-    margin-bottom:30px;
-
-}
-
-.digit{
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:10px;
-
-    display:flex;
+    justify-content:space-between;
 
     align-items:center;
 
-    justify-content:center;
+    margin-top:25px;
 
-    font-size:26px;
+    padding:18px 25px;
 
-    font-weight:bold;
+    background:#08111F;
 
-}
+    border:1px solid #1E3D63;
 
-.safe{
+    border-radius:16px;
 
-    background:#16A34A;
-
-    color:white;
+    color:#A5B8CB;
 
 }
 
-.fault{
-
-    background:#DC2626;
-
-    color:white;
-
-}
-
-.error-list{
+.footer-left,
+.footer-right{
 
     display:flex;
 
-    flex-direction:column;
+    gap:25px;
 
-    gap:15px;
+    align-items:center;
 
-}
+    font-size:14px;
 
-.indicator{
-
-    width:14px;
-
-    height:14px;
-
-    border-radius:50%;
-
-    display:inline-block;
-
-    margin-right:10px;
-
-}
-/* ==========================================
-   Graph Section
-========================================== */
-
-#graphs h2{
-
-    color:#00E5FF;
-
-    margin-bottom:20px;
+    font-weight:500;
 
 }
 
-.graph-grid{
+/* ==========================================================
+   PANEL ANIMATION
+========================================================== */
 
-    display:grid;
+section{
 
-    grid-template-columns:repeat(2,1fr);
-
-    gap:20px;
-
-}
-
-.graph-card{
-
-    background:#0F172A;
-
-    border:1px solid #293548;
-
-    border-radius:10px;
-
-    padding:15px;
+    transition:
+        transform .30s ease,
+        box-shadow .30s ease,
+        border-color .30s ease;
 
 }
 
-.graph-card h3{
+section:hover{
 
-    margin-bottom:15px;
+    box-shadow:
 
-    color:#FFFFFF;
+        0 12px 35px rgba(0,0,0,.35),
 
-    text-align:center;
+        0 0 15px rgba(0,217,255,.08);
+
+}
+
+/* ==========================================================
+   BUTTON EFFECT
+========================================================== */
+
+button{
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
 
 }
 
-.graph-card canvas{
+button:hover{
 
-    width:100% !important;
-
-    height:220px !important;
+    transform:translateY(-3px);
 
 }
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================================================
+   CARD GLOW
+========================================================== */
+
+.status-card,
+.graph-card,
+.telemetry-row,
+.mission-card{
+
+    transition:.30s;
+
+}
+
+.status-card:hover,
+.graph-card:hover,
+.telemetry-row:hover,
+.mission-card:hover{
+
+    box-shadow:
+
+        0 0 18px rgba(0,217,255,.12);
+
+}
+
+/* ==========================================================
+   LIVE STATUS GLOW
+========================================================== */
+
+.online{
+
+    animation:statusPulse 2s infinite;
+
+}
+
+@keyframes statusPulse{
+
+    0%{
+
+        text-shadow:0 0 5px #00D26A;
+
+    }
+
+    50%{
+
+        text-shadow:
+
+            0 0 12px #00D26A,
+
+            0 0 24px #00D26A;
+
+    }
+
+    100%{
+
+        text-shadow:0 0 5px #00D26A;
+
+    }
+
+}
+
+/* ==========================================================
+   TITLES
+========================================================== */
+
+h2{
+
+    letter-spacing:.6px;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1400px){
+
+    .main-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bottom-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .status-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:1000px){
+
+    #mission-status{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .graph-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .mission-info{
+
+        flex-wrap:wrap;
+
+        justify-content:flex-end;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .top-bar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+
+    }
+
+    #control-bar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    #control-bar button{
+
+        width:100%;
+
+    }
+
+    .simulation-toggle{
+
+        margin-left:0;
+
+        justify-content:center;
+
+    }
+
+    #mission-status{
+
+        grid-template-columns:1fr;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+    }
+
+    .footer-left,
+    .footer-right{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .graph-card canvas{
+
+        height:220px!important;
+
+    }
+
+    #map{
+
+        height:350px;
+
+    }
+
+    #camera{
+
+        height:300px;
+
+    }
+
+    #orientation-view{
+
+        height:300px;
+
+    }
+
+}
+
+/* ==========================================================
+   LEAFLET MAP
+========================================================== */
+
+.leaflet-container{
+
+    border-radius:16px;
+
+    font-family:'Inter',sans-serif;
+
+}
+
+/* ==========================================================
+   CHART CANVAS
+========================================================== */
+
+canvas{
+
+    display:block;
+
+}
+
+/* ==========================================================
+   VIDEO
+========================================================== */
+
+video{
+
+    display:block;
+
+}
+
+/* ==========================================================
+   REMOVE TEXT SELECTION ON BUTTONS
+========================================================== */
+
+button{
+
+    user-select:none;
+
+}
+
+/* ==========================================================
+   END
+========================================================== */
