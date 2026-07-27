@@ -1,1 +1,392 @@
+/* ==========================================================
+   CanSat Ground Control Station
+   Responsive Layout
+==========================================================*/
 
+/* ==========================================================
+   Large Laptop
+==========================================================*/
+
+@media (max-width: 1400px){
+
+    .main-content{
+
+        grid-template-columns:300px 1fr;
+
+    }
+
+    #map{
+
+        height:520px;
+
+    }
+
+}
+
+/* ==========================================================
+   Laptop
+==========================================================*/
+
+@media (max-width: 1200px){
+
+    .main-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bottom-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .status-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #mission-status{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .graph-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    #map{
+
+        height:500px;
+
+    }
+
+}
+
+/* ==========================================================
+   Tablet
+==========================================================*/
+
+@media (max-width: 992px){
+
+    .top-bar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .mission-info{
+
+        width:100%;
+
+        justify-content:space-between;
+
+        flex-wrap:wrap;
+
+    }
+
+    #control-bar{
+
+        justify-content:center;
+
+    }
+
+    #mission-status{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .graph-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .telemetry-row{
+
+        padding:12px;
+
+    }
+
+    #orientation-view{
+
+        height:350px;
+
+    }
+
+    #camera{
+
+        height:350px;
+
+    }
+
+    #map{
+
+        height:450px;
+
+    }
+
+}
+
+/* ==========================================================
+   Mobile Landscape
+==========================================================*/
+
+@media (max-width:768px){
+
+    .dashboard{
+
+        padding:15px;
+
+    }
+
+    .top-bar{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .title-section h1{
+
+        font-size:28px;
+
+    }
+
+    .mission-info{
+
+        justify-content:center;
+
+    }
+
+    #control-bar{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    #control-bar button{
+
+        width:100%;
+
+    }
+
+    .simulation-toggle{
+
+        margin-left:0;
+
+        justify-content:center;
+
+    }
+
+    #mission-status{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .telemetry-row{
+
+        font-size:14px;
+
+    }
+
+    .graph-card canvas{
+
+        height:220px !important;
+
+    }
+
+    #orientation-view{
+
+        height:300px;
+
+    }
+
+    #camera{
+
+        height:300px;
+
+    }
+
+    #map{
+
+        height:350px;
+
+    }
+
+    .video-controls{
+
+        flex-direction:column;
+
+    }
+
+    .mission-buttons{
+
+        gap:12px;
+
+    }
+
+    .error-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+    }
+
+    .footer-left,
+
+    .footer-right{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+/* ==========================================================
+   Mobile Portrait
+==========================================================*/
+
+@media (max-width:480px){
+
+    body{
+
+        font-size:14px;
+
+    }
+
+    .title-section h1{
+
+        font-size:22px;
+
+    }
+
+    section{
+
+        padding:15px;
+
+    }
+
+    .mission-card{
+
+        min-width:100%;
+
+    }
+
+    .telemetry-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+    .digit{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:22px;
+
+    }
+
+    #map{
+
+        height:300px;
+
+    }
+
+    #orientation-view{
+
+        height:250px;
+
+    }
+
+    #camera{
+
+        height:250px;
+
+    }
+
+    .graph-card{
+
+        padding:12px;
+
+    }
+
+    .graph-card h3{
+
+        font-size:16px;
+
+    }
+
+    .graph-card canvas{
+
+        height:180px !important;
+
+    }
+
+}
+
+/* ==========================================================
+   Very Small Devices
+==========================================================*/
+
+@media (max-width:360px){
+
+    .title-section h1{
+
+        font-size:20px;
+
+    }
+
+    #control-bar button{
+
+        font-size:13px;
+
+        padding:10px;
+
+    }
+
+    .status-card{
+
+        padding:12px;
+
+    }
+
+    .mission-buttons button{
+
+        padding:12px;
+
+        font-size:13px;
+
+    }
+
+}
